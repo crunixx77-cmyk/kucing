@@ -1,0 +1,2 @@
+[x86_64] Compile        : nujuma <= nujuma.c
+[x86_64] SharedLibrary  : libnujuma.so

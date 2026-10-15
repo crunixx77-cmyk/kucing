@@ -1,0 +1,14 @@
+rm -f /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/lib/x86/*
+rm -f /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/lib/x86/gdbserver
+rm -f /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/lib/x86/gdb.setup
+mkdir -p /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/obj/local/x86/objs/nujuma
+echo [x86] "Compile        ": "nujuma <= nujuma.c"
+rm -f /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/obj/local/x86/objs/nujuma/nujuma.o
+/home/codespace/android-sdk/ndk/22.1.7171670/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -MMD -MP -MF /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/obj/local/x86/objs/nujuma/nujuma.o.d -target i686-none-linux-android21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes  --sysroot /home/codespace/android-sdk/ndk/22.1.7171670/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument  -D_FORTIFY_SOURCE=2 -fPIC -O2 -DNDEBUG  -I/workspaces/kucing/terminal-emulator/src/main/jni -std=c11 -Wall -Wextra -Werror -Os -fno-stack-protector -Wl,--gc-sections  -DANDROID  -Wformat -Werror=format-security -mstackrealign  -c  /workspaces/kucing/terminal-emulator/src/main/jni/nujuma.c -o /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/obj/local/x86/objs/nujuma/nujuma.o
+mkdir -p /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/obj/local/x86
+echo [x86] "SharedLibrary  ": "libnujuma.so"
+/home/codespace/android-sdk/ndk/22.1.7171670/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -Wl,-soname,libnujuma.so -shared /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/obj/local/x86/objs/nujuma/nujuma.o -lgcc -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -latomic -Wl,--exclude-libs,libatomic.a -target i686-none-linux-android21 -no-canonical-prefixes   -Wl,--build-id=sha1 -Wl,--no-rosegment  -stdlib=libstdc++ -Wl,--no-undefined -Wl,--fatal-warnings  -lc -lm -o /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/obj/local/x86/libnujuma.so
+mkdir -p /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/lib/x86
+echo [x86] "Install        ": "libnujuma.so => /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/lib/x86/libnujuma.so"
+install -p /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/obj/local/x86/libnujuma.so /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/lib/x86/libnujuma.so
+/home/codespace/android-sdk/ndk/22.1.7171670/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip --strip-unneeded  /workspaces/kucing/terminal-emulator/build/intermediates/ndkBuild/release/lib/x86/libnujuma.so

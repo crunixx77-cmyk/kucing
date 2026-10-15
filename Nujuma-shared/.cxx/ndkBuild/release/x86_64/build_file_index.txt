@@ -1,0 +1,2 @@
+/workspaces/kucing/Nujuma-shared/src/main/cpp/Android.mk
+/workspaces/kucing/Nujuma-shared/src/main/cpp/Application.mk

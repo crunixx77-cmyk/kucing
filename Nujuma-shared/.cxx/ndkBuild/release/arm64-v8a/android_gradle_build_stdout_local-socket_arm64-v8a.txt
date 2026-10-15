@@ -1,0 +1,2 @@
+[arm64-v8a] Compile++      : local-socket <= local-socket.cpp
+[arm64-v8a] SharedLibrary  : liblocal-socket.so
