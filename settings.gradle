@@ -1,0 +1,3 @@
+rootProject.name = 'kucing'
+
+include ':Nujuma-shared', ':terminal-emulator', ':terminal-view'
