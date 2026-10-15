@@ -27,8 +27,8 @@ android {
 
         implementation project(":terminal-view")
 
-        // Menggunakan file .aar lokal secara offline
-        implementation files('libs/nujuma-am-library-v2.0.0.aar')
+        // Menggunakan remote dependency dari GitHub Release v2.0.0
+        implementation 'nujuma-am-library:nujuma-am-library:v2.0.0@aar'
     }
 
     defaultConfig {

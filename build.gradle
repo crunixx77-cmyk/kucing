@@ -13,6 +13,12 @@ allprojects {
         google()
         mavenCentral()
         maven { url "https://jitpack.io" }
+        ivy {
+            url 'https://github.com/crunixx77-cmyk/kucing/releases/download'
+            patternLayout {
+                artifact '[revision]/[artifact]-[revision].[ext]'
+            }
+        }
     }
 }
 
