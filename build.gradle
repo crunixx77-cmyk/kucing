@@ -18,6 +18,9 @@ allprojects {
             patternLayout {
                 artifact '[revision]/[artifact]-[revision].[ext]'
             }
+            metadataSources {
+                artifact()
+            }
         }
     }
 }
